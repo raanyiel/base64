@@ -34,11 +34,11 @@ fn main() {
             .lines()
             .try_collect::<Box<str>>()
             .expect("idk bruh");
-        ced(&cmd, msg);
+        ced(&cmd, &msg);
         return;
     }
 
     let (_, msg) = args.split_at(2);
     let msg = msg.join(" ");
-    ced(&cmd, msg);
+    ced(&cmd, &msg);
 }
